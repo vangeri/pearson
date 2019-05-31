@@ -1,0 +1,37 @@
+.pr-register { 
+	max-width: 40rem;
+	padding-top: 2rem;
+	
+	section {
+		border: 1px solid #f2f2f2;
+		border-radius: 0.25rem;
+		background-color: #fff;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+		transition: backgroundColor 0.3s linear;
+		padding: .75rem !important;
+	}
+	
+	.pr-titleaction {
+		margin-bottom: 0.5rem;
+	}
+	
+	.pr-form-group {
+		display: block;
+		margin-bottom: 1rem;
+		
+		.pr-form-group--field {
+			width: 100% ;
+		}
+	}
+	
+	.pr-btn__primary { 
+		width: 100%; 
+	}
+	
+	.pr-register-actions { 
+		margin: 1.5rem 0 1rem; 
+		p {
+			font-size: .875rem;
+		}
+	}
+}
