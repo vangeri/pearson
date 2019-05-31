@@ -1,0 +1,41 @@
+/* Buttons --------- */
+.pr-btn {
+	display: inline-block;
+	padding: 0.75rem 1.25rem;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-decoration: none;
+	letter-spacing: 0;
+	cursor: pointer;
+	border: 0;
+	border-radius: 0.25rem;
+	outline: 0;
+	white-space: nowrap;
+	text-align: center;
+	
+	&:hover {
+		box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+	}
+  
+	&--primary {
+		background-color: #F39C12;
+		color: #fff;
+    
+		&:hover {
+			background-color: darken(#F39C12, 10%);
+            color: #eee;
+		}
+  	}
+  
+	&--secondary {
+		background-color: #eee;
+		color: #555;
+
+		&:hover {
+			background-color: #ddd;
+			color: #333;
+		}
+  	}	
+}
+
