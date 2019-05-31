@@ -1,6 +1,11 @@
     /* Transform Array Function */
 function transformNums(arr) {
-    arr.sort(function(a, b){return a - b}); /* Sort the array in ascending order */
+
+    /* Write original array on page */
+    document.getElementById("originalArray").innerHTML = arr;
+ 
+    /* Sort the array in ascending order */
+    arr.sort(function(a, b){return a - b});
 
     var transformedArray = []; /* Initialize an empty array */
     
@@ -9,6 +14,9 @@ function transformNums(arr) {
         transformedArray = transformedArray.concat(arr);
         arr.reverse();
     }
+
+    /* Write new array to page */
+    document.getElementById("transformedArray").innerHTML = transformedArray;
 
     /* Show the new array in console */
     console.log(transformedArray);
