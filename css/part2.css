@@ -1,0 +1,37 @@
+ul.colored-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.colored-list li {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  margin-bottom: .5rem;
+}
+
+ul.colored-list li:nth-child(1) {
+  color: #fff;
+  background-color: #ff6698;
+}
+
+ul.colored-list li:nth-child(2) {
+  color: #333;
+  background-color: #ffb366;
+}
+
+ul.colored-list li:nth-child(3) {
+  color: #333;
+  background-color: #ffff66;
+}
+
+ul.colored-list li:nth-child(4) {
+  color: #333;
+  background-color: #98ff66;
+}
+
+ul.colored-list li:nth-child(5) {
+  color: #fff;
+  background-color: #6698ff;
+}
+/*# sourceMappingURL=part2.css.map */
