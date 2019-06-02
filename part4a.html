@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+    <title>Pearsons Code Test - Part 4a - Train Wreck</title>
+    
+    <link rel="stylesheet" href="css/part4a.css">
+  
+</head>
+
+<body>
+    
+	<!-- Accessiblity Jump Links-->
+    <a href="#content" class="pr-skipto pr-sr-only pr-sr-only__focusable">Skip to Content</a>
+
+
+    <main id="content" role="main" >
+        <section>
+            <h1>Train Wreck!</h1>
+
+            <p class="pr-form-instruction">
+                A train leaves Maryland, traveling north to a town some distance away. Another train leaves that town at either the same time, or on a brief delay, traveling south on
+                the same track. Play with the settings below to see when they will collide. Remember, that rate * time = distance.
+            </p>
+
+            <form id="trainWreckForm" onsubmit="return submitTrainWreckForm">
+
+                <div aria-live="assertive" class="pr-error-message" id="formError"></div>
+
+                <div class="pr-grouped">
+                    <div class="pr-form-group">
+                        <label for="trainA-speed" class="pr-form-group__label">Train A - Speed (in mph)</label>
+                        <input type="number" class="pr-form-group__field" id="trainA-speed" autocomplete="off" placeholder="E.g., 60" />
+                    </div>
+                    <div class="pr-form-group">
+                        <label for="trainB-speed" class="pr-form-group__label">Train B - Speed (in mph)</label>
+                        <input type="number" class="pr-form-group__field" id="trainB-speed" autocomplete="off" placeholder="E.g., 60" />
+                    </div>
+                </div>
+                <div class="pr-grouped">
+                    <div class="pr-form-group">
+                        <label for="town-distance" class="pr-form-group__label">Distance between towns (in miles</label>
+                        <input type="number" class="pr-form-group__field" id="town-distance" autocomplete="off" placeholder="E.g., 200" />
+                    </div>
+                    <div class="pr-form-group">
+                        <label for="train-delay" class="pr-form-group__label">Train B - delay (in minutes)</label>
+                        <input type="number" class="pr-form-group__field" id="train-delay" autocomplete="off" placeholder="E.g., 15" />
+                    </div>
+                </div>
+                <div class="pr-grouped pr-grouped--actions">
+                    <div class="pr-form-group">
+                        <button type="submit" class="pr-btn pr-btn--primary">Try it!</button>
+                    </div>	
+                </div>
+            </form>
+
+            <div class="pr-results" id="result">
+                <h2>Result:</h2>
+
+                <div class="pr-results__bar">
+                    <div class="pr-results__bar--a"></div>
+                    <div class="pr-results__bar--b"></div>
+                </div>
+
+
+                <p>
+                    Train A collides with Train B at <span class="crash-distance">xx</span> miles from Maryland, <span class="crash-time">xx</span> minutes after it left
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        &copy; all rights reserved
+    </footer>
+    
+    <script language="javascript" src="part4a.js"></script>
+
+</body>
+</html>
