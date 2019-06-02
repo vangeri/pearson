@@ -4,14 +4,24 @@
     &__bar {
         display: flex;
         margin-bottom: 1rem;
-        padding-top: 1.5rem;
+        padding-top: 2rem;
 
         &--a {
             height: 1rem;
-            flex: 1;
+            flex: 0 0 50%;
             background-color: #18BC9C;
             border-radius: .25rem 0 0 .25rem;
             position: relative;
+
+            &:before {
+                content:"Train A";
+                display: inline-block;
+                position: absolute;
+                bottom: calc(100% + .625rem);
+                left: 0;
+                transform: translateX(-50%);
+                font-weight: 500;
+            }
 
             &:after {
                 content: "Smash!!";
@@ -29,6 +39,17 @@
             flex: 1;
             background-color: #F39C12;
             border-radius: 0 .25rem .25rem 0;
+            position: relative;
+
+            &:after {
+                content:"Train B";
+                display: inline-block;
+                position: absolute;
+                bottom: calc(100% + .625rem);
+                right: 0;
+                transform: translateX(50%);
+                font-weight: 500;
+            }
         }
     }
 }

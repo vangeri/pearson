@@ -1,6 +1,9 @@
 function submitTrainWreckForm(e) {
     var hasErrors = checkErrors();
 
+    /* Hide results */
+    document.getElementById("result").style.display = "none";
+
     if(!hasErrors) {
         renderResult();
     }
@@ -73,10 +76,18 @@ function renderResult() {
         trainBSpeedField = document.getElementById("trainB-speed"),
         townDistanceField = document.getElementById("town-distance"),
         trainBDelayField = document.getElementById("train-delay"),
-        trainASpeed = trainASpeedField.value,
-        trainBSpeed = trainBSpeedField.value,
-        townDistance = townDistanceField.value,
-        trainBDelay = trainBDelayField.value;
+        trainASpeed = parseFloat(trainASpeedField.value),
+        trainBSpeed = parseFloat(trainBSpeedField.value),
+        townDistance = parseFloat(townDistanceField.value),
+        trainBDelay = parseFloat(trainBDelayField.value)/60;
+
+    var crashDistance = (trainASpeed *  (townDistance + trainBSpeed * trainBDelay)) / (trainASpeed + trainBSpeed),
+        crashDistancePercent = (crashDistance / townDistance) * 100;
+
+    document.getElementsByClassName("pr-results__bar--a")[0].style.flexBasis = crashDistancePercent + "%";
+
+    document.getElementsByClassName("crash-distance")[0].innerHTML = Math.round(crashDistance * 100) / 100;
+    document.getElementsByClassName("crash-time")[0].innerHTML = Math.round(((crashDistance / trainASpeed)*60) * 100) / 100; 
 
     document.getElementById("result").style.display = "block";
 }
