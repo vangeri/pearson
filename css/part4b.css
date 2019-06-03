@@ -484,7 +484,7 @@ form {
 .pr-quiz__question {
   background-color: #f7f7f7;
   margin: -1px -1px 0 -1px;
-  padding: .75rem 2rem;
+  padding: .75rem 1rem .75rem 2rem;
   margin-bottom: 1rem;
   min-height: 4.25rem;
   display: -webkit-box;
@@ -511,12 +511,12 @@ form {
 }
 
 .pr-quiz__questionno {
-  padding: 0 2rem;
+  padding: 0 1rem 0 2rem;
   margin-bottom: 1rem;
 }
 
 .pr-quiz__actions {
-  padding: 0 2rem;
+  padding: 0 1rem 0 2rem;
   margin-bottom: 1rem;
   text-align: right;
 }
@@ -551,6 +551,100 @@ form {
 
 .pr-quiz #resumeBtn {
   display: none;
+}
+
+.pr-quiz__scores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -moz-align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-align: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.pr-quiz__review {
+  -webkit-box-flex: 1 0 50%;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+  border: 1px solid #ddd;
+  border-width: 1px 0 0 0;
+}
+
+.pr-quiz__reviewquestion {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.pr-quiz__answers {
+  color: #666;
+  list-style-type: none;
+  margin: 0 0 0 -.25rem;
+  padding: 0;
+}
+
+.pr-quiz__answers li {
+  margin-left: -2rem;
+  padding: .35rem 0 .35rem 2.25rem;
+  position: relative;
+}
+
+.pr-quiz__answers li.correct {
+  color: #090;
+  font-weight: 500;
+}
+
+.pr-quiz__answers li.correct:before {
+  content: "done";
+  display: inline-block;
+  font-family: "Material Icons";
+  font-style: normal;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+}
+
+.pr-quiz__answers li.selected {
+  color: #c00;
+  font-weight: 500;
+}
+
+.pr-quiz__answers li.selected:before {
+  content: "close";
+  display: inline-block;
+  font-family: "Material Icons";
+  font-style: normal;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
 }
 
 /* Lightbox ---*/
@@ -630,7 +724,7 @@ form {
 }
 
 .pr-modal__footer {
-  padding: 0 1rem 1rem;
+  padding: 1rem 1rem 1rem;
   font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -646,6 +740,160 @@ form {
 
 .pr-modal__footer .pr-btn {
   margin-left: 0.5rem;
+}
+
+.pr-accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  margin-bottom: 1rem;
+}
+
+.pr-accordion__item {
+  border: 1px solid #ddd;
+  border-width: 0 1px 1px;
+  background-color: #fff;
+  border-top-width: 0;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+.pr-accordion__item:first-child {
+  border-top-width: 0;
+}
+
+.pr-accordion__item.active .pr-accordion__title:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.pr-accordion__item.active .pr-accordion__details {
+  display: block;
+}
+
+.pr-accordion__title {
+  padding: .75rem 1rem .75rem 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+}
+
+.pr-accordion__title:before {
+  content: "arrow_right";
+  display: inline-block;
+  font-family: "Material Icons";
+  font-style: normal;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  margin: 0 0.25rem 0 0;
+}
+
+.pr-accordion__title h4 {
+  font-weight: normal;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.pr-accordion__title i.material-icons.green {
+  color: #090;
+}
+
+.pr-accordion__title i.material-icons.red {
+  color: #c00;
+}
+
+.pr-accordion__details {
+  display: none;
+  padding: 1rem 1rem 1rem 2.5rem;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+}
+
+.pr-donut {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pr-donut__slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pr-donut__center {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.pr-donut__center span {
+  display: block;
+  text-align: center;
+}
+
+.pr-donut.chart1 {
+  width: 80px;
+  height: 80px;
+  background: #FFB81C;
+}
+
+.pr-donut.chart1 .pr-donut__slice.one {
+  clip: rect(0 80px 40px 0);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  background: #047A9C;
+}
+
+.pr-donut.chart1 .pr-donut__slice.two {
+  clip: rect(0 40px 80px 0);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  background: #047A9C;
+}
+
+.pr-donut.chart1 .pr-donut__center {
+  top: 8px;
+  left: 8px;
+  width: 64px;
+  height: 64px;
+  background: #fff;
+}
+
+.pr-donut.chart1 .pr-donut__center span {
+  font-size: 1.125rem;
+  line-height: 64px;
+  color: #047A9C;
+}
+
+.pr-donut.chart1 .pr-donut__center span:after {
+  content: "75%";
 }
 
 footer {

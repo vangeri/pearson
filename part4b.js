@@ -32,7 +32,7 @@ const quiz = {
         },
         {
             question: 'How does standing with your feet shoulder width apart help you have abetter delivery?',
-            choices: ['Eliminate distracting movement', 'You avoic falling over', 'You can see the back of the room better', 'You can breathe better'],
+            choices: ['Eliminate distracting movement', 'You avoid falling over', 'You can see the back of the room better', 'You can breathe better'],
             worth: 3,
             timetoshow: 36
         },
@@ -147,47 +147,89 @@ const quiz = {
     updateDropdown: function(qNum) {
         $(".pr-dropdown__menu").find("li").eq(qNum-1).addClass("current").siblings().removeClass("current");                
         $(".pr-dropdown__toggle").text("Question " + qNum + " of 5");
+        $("#questionPoints").text(quiz.questions[qNum].worth);
     },
     updateDropdownResults: function() {
         $(".pr-dropdown__menu").find("li.current").addClass("complete");
     }
 }
 
+var accordion = {
+		
+    init: function() {
+        this.cacheDom();
+        this.bindEvents();
+    },
+
+    cacheDom: function() {
+        this.accordions = document.querySelectorAll('.pr-accordion');
+    },
+
+    bindEvents: function() {
+        this.accordions.forEach( accordion => {
+            accordion.addEventListener('click', this.toggleAccordion.bind(this) );
+        });
+    },
+    
+    toggleAccordion: function( e ) {	
+        
+        const isAccordionTitle = e.path.some( arrayItem => arrayItem.classList.contains('pr-accordion__title') );
+        if ( !isAccordionTitle ) { return; }
+        
+        const accordionItem = e.target.closest('.pr-accordion__item'),
+            allSiblings = accordionItem.parentNode.querySelectorAll('.pr-accordion__item');
+        
+        // Don't remove .active if it's current node
+        allSiblings.forEach( sibling => {
+            if ( sibling !== accordionItem ) {
+                sibling.classList.remove('active');
+            }
+        });
+        
+        accordionItem.classList.toggle('active');
+
+    }
+    
+};
+
+
+(function( $ ) {
+    "use strict";
+
+    $(".js-open-modal").on("click", function(e) {		
+        e.preventDefault();	
+        $(this).modal('open');
+    });
+
+    $(".pr-modal").on("click", ".js-close-modal", function() {
+        $(this).modal('close');
+    });	
+
+    $.fn.modal = function( action ) {
+
+        if ( action === "open") {			
+            var modalId = this.attr("href");
+            $(modalId).show();	
+            $("body").addClass("pr-modal-open");
+        }
+
+        if ( action === "close" ) {		
+            /* Close the Modal */
+            this.closest(".pr-modal").hide();
+            
+            var $otherModals = $(".pr-modal:visible").length;
+            
+            if ($otherModals === 0) {
+                $("body").removeClass("pr-modal-open");
+            }
+        } 
+    };
+
+}( jQuery ));
+
+
 $(function() {
     dropdown.init();
     quiz.init();
+    accordion.init();
 });
-
-(function( $ ) {
-	"use strict";
-	
-	$(".js-open-modal").on("click", function(e) {		
-		e.preventDefault();	
-		$(this).modal('open');
-	});
-	
-	$(".pr-modal").on("click", ".js-close-modal", function() {
-		$(this).modal('close');
-	});	
- 
-    $.fn.modal = function( action ) {
- 
-        if ( action === "open") {			
-			var modalId = this.attr("href");
-			$(modalId).show();	
-			$("body").addClass("pr-modal-open");
-        }
- 
-        if ( action === "close" ) {		
-			/* Close the Modal */
-			this.closest(".pr-modal").hide();
-			
-			var $otherModals = $(".pr-modal:visible").length;
-			
-			if ($otherModals === 0) {
-				$("body").removeClass("pr-modal-open");
-			}
-        } 
-    };
- 
-}( jQuery ));
