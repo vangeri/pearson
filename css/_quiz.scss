@@ -1,0 +1,145 @@
+$border-color: #ddd;
+
+.pr-quiz {
+    p {
+        margin-bottom: .5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    header {
+        @include flexbox();
+        @include align-items(center);
+        border-bottom: 1px solid $border-color;
+        margin-bottom: 1rem;
+
+        h1 {
+            font-size: 1rem;
+            margin: 0;
+            padding: 1rem 2rem 1rem 0;
+            @include flex(1 0 45%);
+            border-right: 1px solid $border-color;
+        }
+    }
+
+    &__points {
+        margin: 0;
+        padding: 1rem 2rem;
+        border-right: 1px solid $border-color;
+        text-align: center;
+    }
+
+    &__due {
+        margin: 0;
+        @include flex(1);
+        padding: 1rem 0 1rem 2rem;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    &__objective {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $border-color;
+    }
+
+    &__description {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__counter {
+        display: none;
+        @include justify-content(flex-end);
+        padding: 1rem 0;
+
+        &.show {
+            @include flexbox();
+        }
+    }
+
+    &__container {
+        @include flexbox();
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    &__video {
+        @include flex(1 0 50%);
+
+        video {
+            display: block;
+        }
+    }
+    &__questions {
+        @include flex(1 0 50%);
+        border: 1px solid #ddd;
+
+        /* Initial state */
+        &.initial {
+            .pr-quiz__question, .pr-quiz__answeroptions, .pr-quiz__actions {
+                display: none;
+            }
+        }
+    }
+    &__question {
+        background-color: #f7f7f7;
+        margin: -1px -1px 0 -1px;
+        padding: .75rem 2rem;
+        margin-bottom: 1rem;
+        min-height: 4.25rem;
+        @include flexbox();
+        @include align-items(center);
+    }
+    &__answeroptions {
+        list-style-type: none; 
+        margin: 0 2rem 1rem;
+        padding: 0;
+
+        li {
+            margin-bottom: .5rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    &__questionno {
+        padding: 0 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__actions {
+        padding: 0 2rem;
+        margin-bottom: 1rem;
+        text-align: right;
+    }
+
+    /* Initial state */
+    &__initial {
+        background-color: #005A70;
+        height: 100%;
+        color: #fff;
+        display: none;
+        @include justify-content(center);
+        @include align-items(center);
+
+        .initial & {
+            @include flexbox();
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+    }
+
+    #resumeBtn {
+        display: none;
+    }
+}

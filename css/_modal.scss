@@ -1,0 +1,82 @@
+/* Lightbox ---*/
+.pr-modal {
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: scroll; 
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	height: 100%;
+	width: 100%;
+	
+	&__inner {
+		background: #fff;
+		position: relative;
+		border-radius: 0;
+		@include flexbox();
+		@include flex-direction(column);
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+		width: 100%;
+		max-width: 600px;
+		margin: 3rem auto;
+		
+		.pr-modal__close {
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			
+			.material-icons {
+				font-size: 1.5rem;
+				font-weight: 600;
+				opacity: 0.6;
+			}
+			
+			&:hover {
+				.material-icons {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+	&__header {
+		border-bottom: 1px solid #ddd;
+		padding: 1rem;
+		background-color: #f7f7f7;
+		color: #555;
+		
+		a {
+			color: #555;
+		}
+		
+		h4 {
+			font-size: 1.25rem;
+			margin-bottom: 0;
+			color: #555;
+		}
+	}
+	
+	&__content {
+		@include flex(1 1 auto);
+		padding: 1rem 1rem 2rem 1rem;
+	}
+	
+	&__footer {		
+		padding: 0 1rem 1rem;
+		font-size: 1rem;
+		@include flexbox();
+		text-align: right;
+        @include justify-content(flex-end);
+        border-top: 1px solid #ddd;
+		
+		.pr-btn {
+			margin-left: 0.5rem;
+		}
+	}
+}
+

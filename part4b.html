@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+    <title>Pearsons Code Test - Part 4b - Video Quiz</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/part4b.css">
+  
+</head>
+
+<body>
+    
+	<!-- Accessiblity Jump Links-->
+    <a href="#content" class="pr-skipto pr-sr-only pr-sr-only__focusable">Skip to Content</a>
+
+    <main id="content" role="main" class="pr-quiz" >
+        <header>
+            <h1><strong>Title:</strong> Learning The Keys to Physical Delivery Skills</h1>
+            <div class="pr-quiz__points">15 Points</div>
+            <div class="pr-quiz__due"><strong>Due:</strong> Oct 18, 2019 - Oct 30, 2019</div>
+
+        </header>        
+        <section class="pr-quiz__objective">
+            <p>
+                <strong>Learning Objective:</strong> The develop knowledge and skills related to the student's understanding of rehersal techniques, 
+                and his/her abilities in the ensemble performance as well as the knowledge of music literature and conducting skills.
+            </p>
+        </section>
+        <section class="pr-quiz__description">
+            <p>
+                <strong>Description:</strong> As you watch the video, quiz questions will appear. You must answer all questions to submit the quiz.
+            </p>
+        </section>
+
+        <section class="pr-quiz__counter">
+            <div class="pr-dropdown">
+                <a href="javascript:;" id="ddToggle" class="pr-dropdown__toggle" aria-haspopup="true" aria-expanded="false">Question 1 of 5</a>
+                <div class="pr-dropdown__menu" aria-labledby="ddToggle">
+                    <ul>
+                        <li><span class="pr-dropdown__num">1.</span> <span class="pr-dropdown__status"><i class="material-icons">done</i></span></li>
+                        <li><span class="pr-dropdown__num">2.</span> <span class="pr-dropdown__status"><i class="material-icons">done</i></span></li>
+                        <li><span class="pr-dropdown__num">3.</span> <span class="pr-dropdown__status"><i class="material-icons">done</i></span></li>
+                        <li><span class="pr-dropdown__num">4.</span> <span class="pr-dropdown__status"><i class="material-icons">done</i></span></li>
+                        <li><span class="pr-dropdown__num">5.</span> <span class="pr-dropdown__status"><i class="material-icons">done</i></span></li>
+                    </ul>
+                </div>
+                <div class="pr-dropdown__extra">Worth 1 point</div>
+            </div>
+        </section>
+        
+
+        <section class="pr-quiz__container">
+            <div class="pr-quiz__video">
+                <video controls id="quizVideo">
+                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
+                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.ogg" type="video/ogg">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="pr-quiz__questions initial" aria-live="assertive">
+                <div class="pr-quiz__initial">
+                    <p class="pr-quiz__message">Select the play button to begin your quiz.</p>
+                </div>
+                <div class="pr-quiz__question"></div>
+                <div class="pr-quiz__questionno"></div>
+                <ul class="pr-quiz__answeroptions">
+
+                </ul>
+                <div class="pr-quiz__actions">
+                    <a href="javascript:;" class="pr-btn pr-btn--primary" id="resumeBtn">Resume</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        &copy; all rights reserved
+    </footer>
+
+    <!-- Confirmation Modal -->
+    <div class="pr-modal" id="confirmationModal" role="dialog" aria-labelledby="confirmationModalTitle">
+        <form>
+            <div class="pr-modal__inner">
+                <div class="pr-modal__header">
+                    <a href="#" class="pr-modal__close"><i class="material-icons">close</i></a>
+                    <h4 id="confirmationModalTitle">Submit Quiz</h4>
+                </div>
+                <div class="pr-modal__content">
+                    <p>Are you sure you're ready to sumit? You won't be able to change your answers.</p>
+                </div>
+                <div class="pr-modal__footer">
+                    <a href="javascript:;" class="pr-btn pr-btn--secondary js-close-modal">Review</a>
+                    <a href="javascript:;" class="pr-btn pr-btn--primary js-confirm-submit">Submit Quiz</a>
+                </div>
+            </div>
+        </form>
+    </div><!-- /Confirmation modal -->
+
+    <script language="javascript" src="jquery-3.4.1.min.js"></script>
+    <script language="javascript" src="part4b.js"></script>
+
+</body>
+</html>
