@@ -11,14 +11,15 @@
 
 <body>
     
-	<!-- Accessiblity Jump Links-->
-    <a href="#content" class="pr-skipto pr-sr-only pr-sr-only--focusable">Skip to Content</a>
     <header class="pr-header" role="banner">
+        <!-- Accessiblity Jump Links-->
+        <a href="#content" class="pr-skipto pr-sr-only pr-sr-only--focusable">Skip to Content</a>
+
         <h1>Pearsons</h1>
     </header>
 
     <main id="content" role="main" >
-        <section>
+        <section role="region">
             <h1>Train Wreck!</h1>
 
             <p class="pr-form-instruction">
@@ -28,7 +29,7 @@
 
             <form id="trainWreckForm" onsubmit="return submitTrainWreckForm">
 
-                <div aria-live="assertive" class="pr-error-message" id="formError"></div>
+                <div aria-live="assertive" aria-atomic="true" class="pr-error-message" id="formError"></div>
 
                 <div class="pr-grouped">
                     <div class="pr-form-group">
