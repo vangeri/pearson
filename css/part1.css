@@ -1,6 +1,6 @@
 /* Resets */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Helvetica, sans-serif;
 }
 
 *, *:before, *:after {
@@ -79,7 +79,7 @@ fieldset {
 }
 
 header {
-  background: #f7f7f7;
+  background: #fff;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
@@ -87,6 +87,12 @@ header {
 
 header h1 {
   font-weight: normal;
+  text-indent: -9999px;
+  background: url(../images/logo_pearsons.png) no-repeat left center;
+  background-size: contain;
+  width: 145px;
+  height: 43px;
+  margin-bottom: 0;
 }
 
 main {
@@ -98,6 +104,21 @@ main {
 main h2 {
   font-weight: normal;
   margin-bottom: 1rem;
+}
+
+main.pr-index {
+  max-width: 71.25rem;
+}
+
+.pr-pages {
+  padding: 1.25rem;
+  margin: 0;
+}
+
+.pr-pages li {
+  margin-bottom: .75rem;
+  font-size: 1rem;
+  padding-left: .5rem;
 }
 
 .pr-register {

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-    <title>Pearsons Code Test - Part 4b - Video Quiz</title>
+    <title>Pearson Code Test - Part 4b - Video Quiz</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/part4b.css">
@@ -14,6 +14,20 @@
     
 	<!-- Accessiblity Jump Links-->
     <a href="#content" class="pr-skipto pr-sr-only pr-sr-only__focusable">Skip to Content</a>
+    <header class="pr-header" role="banner">
+        <h1>Pearsons</h1>
+    </header>
+
+    <div aria-atomic="true" aria-live="assertive">
+        <!-- Message -->
+        <div class="pr-message pr-message--error" id="errorMesg">
+            <a href="javascript:;" class="pr-message__clear"><i class="material-icons" data-action="close">clear</i></a>
+            <p>
+                <strong>Error</strong>
+                Please answer all the questions before submitting your quiz.
+            </p>
+        </div><!-- /Message -->
+    </div>
 
     <main id="content" role="main" class="pr-quiz" >
         <header>

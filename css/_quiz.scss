@@ -13,6 +13,8 @@ $border-color: #ddd;
         @include align-items(center);
         border-bottom: 1px solid $border-color;
         margin-bottom: 1rem;
+        box-shadow: none;
+        padding: 0;
 
         h1 {
             font-size: 1rem;
@@ -20,6 +22,8 @@ $border-color: #ddd;
             padding: 1rem 2rem 1rem 0;
             @include flex(1 0 45%);
             border-right: 1px solid $border-color;
+            background: transparent;
+            text-indent: 0;
         }
     }
 
@@ -81,7 +85,7 @@ $border-color: #ddd;
 
         /* Initial state */
         &.initial {
-            .pr-quiz__question, .pr-quiz__answeroptions, .pr-quiz__actions {
+            .pr-quiz__question, .pr-quiz__answeroptions, .pr-quiz__actions, .pr-quiz__questionno {
                 display: none;
             }
         }

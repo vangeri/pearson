@@ -1,7 +1,7 @@
 /* Material icon ---*/
 /* Resets */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Helvetica, sans-serif;
 }
 
 *, *:before, *:after {
@@ -77,6 +77,23 @@ fieldset {
 
 .pr-skipto:focus, .pr-skipto:hover {
   color: #fff;
+}
+
+header {
+  background: #fff;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  font-weight: normal;
+  text-indent: -9999px;
+  background: url(../images/logo_pearsons.png) no-repeat left center;
+  background-size: contain;
+  width: 145px;
+  height: 43px;
+  margin-bottom: 0;
 }
 
 * {
@@ -392,6 +409,9 @@ form {
   -ms-flex-align: center;
   border-bottom: 1px solid #ddd;
   margin-bottom: 1rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
 }
 
 .pr-quiz header h1 {
@@ -402,6 +422,8 @@ form {
   -ms-flex: 1 0 45%;
   flex: 1 0 45%;
   border-right: 1px solid #ddd;
+  background: transparent;
+  text-indent: 0;
 }
 
 .pr-quiz__points {
@@ -477,7 +499,7 @@ form {
   /* Initial state */
 }
 
-.pr-quiz__questions.initial .pr-quiz__question, .pr-quiz__questions.initial .pr-quiz__answeroptions, .pr-quiz__questions.initial .pr-quiz__actions {
+.pr-quiz__questions.initial .pr-quiz__question, .pr-quiz__questions.initial .pr-quiz__answeroptions, .pr-quiz__questions.initial .pr-quiz__actions, .pr-quiz__questions.initial .pr-quiz__questionno {
   display: none;
 }
 
@@ -894,6 +916,58 @@ form {
 
 .pr-donut.chart1 .pr-donut__center span:after {
   content: "75%";
+}
+
+/* CSS Document */
+.pr-message {
+  padding: 1rem 2.75rem 1rem 1rem;
+  margin-right: 1.5rem;
+  z-index: 600;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  position: fixed;
+  left: 2rem;
+  top: 0rem;
+  margin: 0;
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-top: 5px solid transparent;
+  background-color: #fff;
+}
+
+.pr-message strong {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.pr-message.show {
+  top: 2rem;
+  opacity: 1;
+}
+
+.pr-message__clear {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  color: #888;
+}
+
+.pr-message__clear:hover {
+  color: #666;
+}
+
+.pr-message--error {
+  border-top-color: #c00;
+}
+
+.pr-message--success {
+  border-top-color: #090;
+}
+
+.pr-message--success strong {
+  color: #090;
 }
 
 footer {
