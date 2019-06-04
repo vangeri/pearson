@@ -54,7 +54,7 @@ fieldset {
   border: 0;
 }
 
-.pr-sr-only__focusable:focus {
+.pr-sr-only--focusable:focus {
   top: 0;
   left: 0;
   width: auto;
@@ -63,6 +63,8 @@ fieldset {
   clip: auto;
   white-space: normal;
   z-index: 300;
+  -webkit-box-shadow: 0 0 2px 2px #069;
+          box-shadow: 0 0 2px 2px #069;
 }
 
 /* Skip To Navigation & Skip to Content Links */
@@ -249,6 +251,11 @@ form {
 .pr-btn:hover {
   -webkit-box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
           box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+}
+
+.pr-btn:focus {
+  -webkit-box-shadow: 0 0 2px 2px #069;
+          box-shadow: 0 0 2px 2px #069;
 }
 
 .pr-btn--primary {
