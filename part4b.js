@@ -243,10 +243,14 @@ var accordion = {
         allSiblings.forEach( sibling => {
             if ( sibling !== accordionItem ) {
                 sibling.classList.remove('active');
+                sibling.querySelector(".pr-accordion__title").setAttribute("aria-expanded", false);
             }
         });
         
         accordionItem.classList.toggle('active');
+        var expandedState = e.target.closest(".pr-accordion__title").getAttribute("aria-expanded") === 'true';
+
+        e.target.closest(".pr-accordion__title").setAttribute("aria-expanded", !expandedState);
 
     }
     

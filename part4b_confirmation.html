@@ -31,7 +31,7 @@
             </div><!-- /Message -->
         </div>
 
-        <section class="pr-quiz__scores">
+        <section class="pr-quiz__scores" aria-label="Score summary">
             <div class="pr-quiz__score">
                 <div class="pr-donut chart1">
                     <div class="pr-donut__slice one"></div>
@@ -48,9 +48,9 @@
             </div>
         </section>
         
-        <section class="pr-quiz__container">
+        <section class="pr-quiz__container" aria-label="Quiz video and score details">
             <div class="pr-quiz__video">
-                <video controls>
+                <video controls alt="quiz video">
                     <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
                     <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.ogg" type="video/ogg">
                     Your browser does not support HTML5 video.
@@ -59,11 +59,11 @@
             <div class="pr-quiz__review">
                 <div class="pr-accordion">
                     <div class="pr-accordion__item">
-                         <div class="pr-accordion__title">
-                             <h4>Question 1 <span class="timestamp">[0:12]</span></h4>
-                             <i class="material-icons red">close</i>
+                         <div class="pr-accordion__title" aria-controls="question1" aria-expanded="false">
+                            <h2>Question 1 <span class="timestamp">[0:12]</span></h2>
+                            <i class="material-icons red">close</i>
                          </div>
-                         <div class="pr-accordion__details">
+                         <div class="pr-accordion__details" id="question1">
                             <div class="pr-quiz__reviewquestion">What is the best way to feel more physically comfortable when delivering a speech?</div>
                             <ul class="pr-quiz__answers">
                                 <li class="correct">Take a course about self esteem</li>
@@ -73,12 +73,12 @@
                             </ul>                                
                          </div>
                     </div>
-                    <div class="pr-accordion__item">          
+                    <div class="pr-accordion__item" aria-controls="question2" aria-expanded="false">          
                          <div class="pr-accordion__title">
-                             <h4>Question 2 <span class="timestamp">[0:24]</span></h4>
+                            <h2>Question 2 <span class="timestamp">[0:24]</span></h2>
                              <i class="material-icons red">close</i>
                          </div>
-                         <div class="pr-accordion__details">
+                         <div class="pr-accordion__details" id="question2">
                             <div class="pr-quiz__reviewquestion">Why is it important to have good posture?</div>
                             <ul class="pr-quiz__answers">
                                 <li>More impressive looking</li>
@@ -89,11 +89,11 @@
                          </div>
                     </div>
                     <div class="pr-accordion__item">
-                         <div class="pr-accordion__title">
-                             <h4>Question 3 <span class="timestamp">[0:36]</span></h4>
+                         <div class="pr-accordion__title" aria-controls="question3" aria-expanded="false">
+                            <h2>Question 3 <span class="timestamp">[0:36]</span></h2>
                              <i class="material-icons green">done</i>
                          </div>
-                         <div class="pr-accordion__details">
+                         <div class="pr-accordion__details" id="question3">
                             <div class="pr-quiz__reviewquestion">How does standing with your feet shoulder width apart help you have a better delivery?</div>
                             <ul class="pr-quiz__answers">
                                 <li>Eliminate distracting movement</li>
@@ -103,12 +103,12 @@
                             </ul>   
                          </div>
                     </div>
-                    <div class="pr-accordion__item">
+                    <div class="pr-accordion__item" aria-controls="question4" aria-expanded="false">
                          <div class="pr-accordion__title">
-                             <h4>Question 4 <span class="timestamp">[0:48]</span></h4>
+                            <h2>Question 4 <span class="timestamp">[0:48]</span></h2>
                              <i class="material-icons green">done</i>
                          </div>
-                         <div class="pr-accordion__details">
+                         <div class="pr-accordion__details" id="question4">
                             <div class="pr-quiz__reviewquestion">Why are gestures an important delivery skill to learn?</div>
                             <ul class="pr-quiz__answers">
                                 <li>Helps the audience from seeing how nervous you might be</li>
@@ -119,11 +119,11 @@
                          </div>
                     </div>
                     <div class="pr-accordion__item">
-                         <div class="pr-accordion__title">
-                             <h4>Question 5 <span class="timestamp">[0:60]</span></h4>
+                         <div class="pr-accordion__title" aria-controls="question5" aria-expanded="false">
+                            <h2>Question 5 <span class="timestamp">[0:60]</span></h2>
                              <i class="material-icons green">done</i>
                          </div>
-                         <div class="pr-accordion__details">
+                         <div class="pr-accordion__details" id="question5">
                             <div class="pr-quiz__reviewquestion">What is the outcome of learning correct posture, body movement, and gestures?</div>
                             <ul class="pr-quiz__answers">
                                 <li>Make you look like you have prepared for your speech</li>
@@ -144,25 +144,6 @@
     <footer role="contentinfo">
         &copy; all rights reserved
     </footer>
-
-    <!-- Confirmation Modal -->
-    <div class="pr-modal" id="confirmationModal" role="dialog" aria-labelledby="confirmationModalTitle">
-        <form>
-            <div class="pr-modal__inner">
-                <div class="pr-modal__header">
-                    <a href="#" class="pr-modal__close"><i class="material-icons">close</i></a>
-                    <h4 id="confirmationModalTitle">Submit Quiz</h4>
-                </div>
-                <div class="pr-modal__content">
-                    <p>Are you sure you're ready to sumit? You won't be able to change your answers.</p>
-                </div>
-                <div class="pr-modal__footer">
-                    <a href="javascript:;" class="pr-btn pr-btn--secondary js-close-modal">Review</a>
-                    <a href="javascript:;" class="pr-btn pr-btn--primary js-confirm-submit">Submit Quiz</a>
-                </div>
-            </div>
-        </form>
-    </div><!-- /Confirmation modal -->
 
     <script language="javascript" src="jquery-3.4.1.min.js"></script>
     <script language="javascript" src="part4b.js"></script>

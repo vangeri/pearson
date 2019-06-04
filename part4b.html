@@ -36,19 +36,19 @@
             <div class="pr-quiz__due"><strong>Due:</strong> Oct 18, 2019 - Oct 30, 2019</div>
 
         </header>        
-        <section class="pr-quiz__objective">
+        <section class="pr-quiz__objective" aria-label="Learning objective">
             <p>
                 <strong>Learning Objective:</strong> The develop knowledge and skills related to the student's understanding of rehersal techniques, 
                 and his/her abilities in the ensemble performance as well as the knowledge of music literature and conducting skills.
             </p>
         </section>
-        <section class="pr-quiz__description">
+        <section class="pr-quiz__description" role="region">
             <p>
                 <strong>Description:</strong> As you watch the video, quiz questions will appear. You must answer all questions to submit the quiz.
             </p>
         </section>
 
-        <section class="pr-quiz__counter">
+        <section class="pr-quiz__counter" role="region" aria-label="Quiz progress indicator">
             <div class="pr-dropdown">
                 <a href="javascript:;" id="ddToggle" class="pr-dropdown__toggle" aria-haspopup="true" aria-expanded="false">Question 1 of 5</a>
                 <div class="pr-dropdown__menu" aria-labledby="ddToggle">
@@ -65,9 +65,9 @@
         </section>
         
 
-        <section class="pr-quiz__container">
+        <section class="pr-quiz__container" aria-label="Video with quiz">
             <div class="pr-quiz__video">
-                <video controls id="quizVideo">
+                <video controls id="quizVideo" alt="Quiz video">
                     <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
                     <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.ogg" type="video/ogg">
                     Your browser does not support HTML5 video.
